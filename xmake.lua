@@ -18,7 +18,13 @@ target("test_world")
     set_kind("binary")
     set_languages("c++17")
     add_files(
-        "test/*.cpp",
+        "test/world.cpp",
         "src/world/*.cpp",
         "src/misc/*.cpp")
+    add_packages("gtest")
+
+target("test_noise")
+    set_kind("binary")
+    set_languages("c++17")
+    add_files("test/noise.cpp")
     add_packages("gtest")
